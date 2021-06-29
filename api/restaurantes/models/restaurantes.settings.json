@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "restaurantes",
+  "info": {
+    "name": "restaurantes",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "descripcion": {
+      "type": "richtext",
+      "required": true
+    },
+    "precio": {
+      "type": "biginteger",
+      "required": true
+    },
+    "imagen": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true,
+      "pluginOptions": {}
+    },
+    "calificacion": {
+      "type": "integer"
+    },
+    "categorias": {
+      "model": "categorias"
+    },
+    "ubicaciones": {
+      "collection": "ubicacion"
+    }
+  }
+}
