@@ -1,9 +1,8 @@
 {
-  "kind": "collectionType",
-  "collectionName": "categorias",
+  "kind": "singleType",
+  "collectionName": "inicios",
   "info": {
-    "name": "categorias",
-    "description": ""
+    "name": "inicio"
   },
   "options": {
     "increments": true,
@@ -12,10 +11,8 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "nombre": {
-      "type": "string",
-      "required": true,
-      "unique": true
+    "texto": {
+      "type": "text"
     },
     "imagen": {
       "model": "file",
@@ -24,7 +21,7 @@
         "images"
       ],
       "plugin": "upload",
-      "required": true,
+      "required": false,
       "pluginOptions": {}
     }
   }
