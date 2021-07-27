@@ -36,13 +36,20 @@
       "pluginOptions": {}
     },
     "calificacion": {
-      "type": "integer"
-    },
-    "categorias": {
-      "model": "categorias"
+      "type": "integer",
+      "max": 5,
+      "min": 1,
+      "required": true
     },
     "ubicaciones": {
       "collection": "ubicacion"
+    },
+    "categorias": {
+      "collection": "categorias"
+    },
+    "sedeVisitada": {
+      "type": "string",
+      "required": true
     }
   }
 }
